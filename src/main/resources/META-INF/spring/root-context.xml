@@ -11,7 +11,9 @@
     <context:property-placeholder location="classpath:/application.properties" />
 
     <context:annotation-config/>
-    <context:component-scan base-package="com.ironw"/>
+    <context:component-scan base-package="com.ironw">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+    </context:component-scan>
 
     <import resource="mybatis-context.xml"/>
 </beans>
