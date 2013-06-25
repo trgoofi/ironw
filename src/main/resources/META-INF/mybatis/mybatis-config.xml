@@ -4,7 +4,8 @@
 <configuration>
 
     <settings>
-        <setting name="mapUnderscoreToCamelCase" value="true" /> <!-- Automatic mapping column to java property -->
+        <setting name="autoMappingBehavior" value="FULL" /> <!-- Automatic mapping column to java property -->
+        <setting name="mapUnderscoreToCamelCase" value="true" />
     </settings>
 
 </configuration>
