@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ironw.domain.Ware">
+
+    <resultMap id="ware" type="Ware">
+        <association property="price" javaType="Price" />
+    </resultMap>
+
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true" parameterType="Ware">
+        insert into ware (id, code, name, units, inventory, cost, bottom, wholesale, retail)
+        values (#{id}, #{code}, #{name}, #{units}, #{inventory}, #{price.cost}, #{price.bottom}, #{price.wholesale}, #{price.retail})
+    </insert>
+
+    <update id="update" parameterType="Ware">
+        update ware set
+          inventory = inventory + #{inventory},
+          cost = #{price.cost},
+          bottom = #{price.bottom},
+          wholesale = #{price.wholesale},
+          retail = #{price.retail}
+        where id = #{id}
+</update>
+
+    <select id="findBy" resultMap="ware">
+        select *
+        from ware
+        where id = #{id}
+    </select>
+</mapper>
