@@ -5,7 +5,10 @@
 <mapper namespace="com.ironw.domain.Ware">
 
     <resultMap id="ware" type="Ware">
-        <association property="price" javaType="Price" />
+        <result property="price.cost" column="cost" />
+        <result property="price.bottom" column="bottom" />
+        <result property="price.wholesale" column="wholesale" />
+        <result property="price.retail" column="retail" />
     </resultMap>
 
     <insert id="insert" keyProperty="id" useGeneratedKeys="true" parameterType="Ware">
