@@ -31,4 +31,12 @@
         from ware
         where id = #{id}
     </select>
+
+    <select id="findPage" resultMap="ware">
+        select *
+        from ware
+        <where>
+            <if test="params.keyword != null">code like CONCAT(%, #{params.keywork}, %) or name like CONCAT(%, #{params.keywork} ,%)</if>
+        </where>
+    </select>
 </mapper>
