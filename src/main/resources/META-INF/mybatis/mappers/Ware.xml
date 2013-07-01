@@ -36,7 +36,7 @@
         select *
         from ware
         <where>
-            <if test="params.keyword != null">code like CONCAT(%, #{params.keywork}, %) or name like CONCAT(%, #{params.keywork} ,%)</if>
+            <if test="params.keyword != null">code like CONCAT('%', #{params.keyword}, '%') or name like CONCAT('%', #{params.keyword} ,'%')</if>
         </where>
     </select>
 </mapper>
