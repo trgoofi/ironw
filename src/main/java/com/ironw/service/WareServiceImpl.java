@@ -16,6 +16,7 @@ public class WareServiceImpl implements WareService {
 
   @Override
   public Page<Ware> query(String keyword, Page<Ware> page) {
+    page.param("keyword", keyword);
     return crudRepo.findPage(page, Ware.class);
   }
 }

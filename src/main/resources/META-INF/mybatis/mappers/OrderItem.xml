@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ironw.domain.OrderItem">
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true" parameterType="OrderItem">
+        insert into order_item (id, code, name, units, quantity, price, total, order_id, ware_id)
+        values (#{id}, #{ware.code}, #{ware.name}, #{ware.units}, #{quantity}, #{price}, #{total}, #{order.id}, #{ware.id})
+    </insert>
+</mapper>
