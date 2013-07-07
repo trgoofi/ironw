@@ -24,7 +24,13 @@
           wholesale = #{price.wholesale},
           retail = #{price.retail}
         where id = #{id}
-</update>
+    </update>
+
+    <update id="updateInventory" parameterType="Ware">
+        update ware set
+          inventory = inventory - #{inventory}
+        where id = #{id};
+    </update>
 
     <select id="findBy" resultMap="ware">
         select *
