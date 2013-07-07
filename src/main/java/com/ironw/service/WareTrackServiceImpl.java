@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.inject.Inject;
+import java.util.Date;
 
 /**
  * @author trgoofi
@@ -25,6 +26,8 @@ public class WareTrackServiceImpl implements WareTrackService {
     } else {
       crudRepo.insert(ware);
     }
+
+    wareTrack.setStockAt(new Date());
     crudRepo.insert(wareTrack);
   }
 }

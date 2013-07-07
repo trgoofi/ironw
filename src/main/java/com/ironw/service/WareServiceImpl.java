@@ -15,6 +15,11 @@ public class WareServiceImpl implements WareService {
   @Inject CrudRepo crudRepo;
 
   @Override
+  public Ware getWare(String id) {
+    return crudRepo.findBy(id, Ware.class);
+  }
+
+  @Override
   public Page<Ware> query(String keyword, Page<Ware> page) {
     page.param("keyword", keyword);
     return crudRepo.findPage(page, Ware.class);

@@ -8,4 +8,6 @@ import com.ironw.domain.Ware;
  */
 public interface WareService {
   Page<Ware> query(String keyword, Page<Ware> page);
+
+  Ware getWare(String id);
 }

@@ -57,3 +57,39 @@ body {
 #total {
     margin-right: 5px;
 }
+
+.ware tr td:nth-child(3),
+.ware tr td:nth-child(9)
+{
+    text-align: center;
+}
+.ware tr td:nth-child(4),
+.ware tr td:nth-child(5),
+.ware tr td:nth-child(6),
+.ware tr td:nth-child(7),
+.ware tr td:nth-child(8) {
+    text-align: right;
+}
+
+.form-horizontal .control-group {
+    margin-bottom: 10px
+}
+#modal-container input[type="text"] {
+    text-align: right;
+}
+
+#modal-container .alert {
+    margin-bottom: 0;
+}
+
+.alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+}
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+}
+
