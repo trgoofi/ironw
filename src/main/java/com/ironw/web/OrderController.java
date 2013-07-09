@@ -36,4 +36,10 @@ public class OrderController {
     return "redirect:/";
   }
 
+  @RequestMapping(value = "cancel", method = RequestMethod.GET)
+  public String cancel(HttpSession session) {
+    session.removeAttribute(ORDER_SESSION);
+    return "redirect:/";
+  }
+
 }

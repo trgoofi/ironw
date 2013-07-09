@@ -57,7 +57,7 @@
                     <td colspan="7" style="text-align: right;">
                         <span>总金额：</span>
                         <strong id="total" class="text-info"><fmt:formatNumber minFractionDigits="2" maxFractionDigits="2" value="${order.total}" /></strong>
-                        <a href="${ctx}/" class="btn btn-small btn-margin">取消</a>
+                        <a href="${ctx}/order/cancel" class="btn btn-small btn-margin">取消</a>
                         <a href="${ctx}/order/print" class="btn btn-primary btn-small btn-margin">打单</a>
                         <button type="submit" class="btn btn-primary btn-small btn-margin">结算</button>
                     </td>
