@@ -44,7 +44,7 @@
                     <th class="span1">最平价</th>
                     <th class="span1">工程价</th>
                     <th class="span1">零售价</th>
-                    <th class="span1">操作</th>
+                    <th class="span1"><a id="create" class="btn btn-small btn-primary">新建</a></th>
                 </tr>
             </thead>
             <tbody>
@@ -69,7 +69,7 @@
 <!-- Main End -->
 
 <script id="update-tpl" type="text/template">
-    <div id="update-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+    <div id="ware-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
         <form action="${ctx}/stock" id="stock" method="post" class="form-horizontal">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
@@ -122,7 +122,7 @@
     <div id="success" class="modal hide fade alert-success" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="text-center">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4>{{:ware.name}} 更新成功</h4>
+            <h4>操作成功</h4>
         </div>
     </div>
 </script>
@@ -130,7 +130,7 @@
     <div id="error" class="modal hide fade alert-error" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="text-center">
             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-            <h4>更新失败</h4>
+            <h4>操作失败</h4>
         </div>
     </div>
 </script>
@@ -138,6 +138,70 @@
     <div class="text-left">
         <strong>{{:code}}</strong>
         <strong>{{:name}}</strong>
+    </div>
+</script>
+<script id="create-tpl" type="text/template">
+    <div id="ware-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-hidden="true">
+        <form action="${ctx}/stock" id="stock" method="post" class="form-horizontal">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4>新建商品</h4>
+            </div>
+            <div class="modal-body">
+                <div class="control-group">
+                    <label class="control-label">编号</label>
+                    <div class="controls">
+                        <input type="text" name="ware.code">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">名称</label>
+                    <div class="controls">
+                        <input type="text" name="ware.name">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">单位</label>
+                    <div class="controls">
+                        <input type="text" name="ware.units">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">数量</label>
+                    <div class="controls">
+                        <input type="text" name="ware.inventory">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">进货价</label>
+                    <div class="controls">
+                        <input type="text" name="ware.price.cost">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">最平价</label>
+                    <div class="controls">
+                        <input type="text" name="ware.price.bottom">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">工程价</label>
+                    <div class="controls">
+                        <input type="text" name="ware.price.wholesale">
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">零售价</label>
+                    <div class="controls">
+                        <input type="text" name="ware.price.retail">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+                <button type="submit" class="btn btn-primary">新建</button>
+            </div>
+        </form>
     </div>
 </script>
 
