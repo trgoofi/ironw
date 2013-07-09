@@ -70,7 +70,5 @@
 <!-- Main End -->
 <script src="${ctx}/assets/js/jquery.js"></script>
 <script src="${ctx}/assets/js/bootstrap.js"></script>
-<script src="${ctx}/assets/js/jsrender.js"></script>
-<script src="${ctx}/assets/js/ironw.js"></script>
 </body>
 </html>

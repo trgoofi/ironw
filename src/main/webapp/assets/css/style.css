@@ -12,9 +12,11 @@ body {
     text-align: center;
 }
 
-.cart {
-    margin-top: 100px;
+.query-box {
+    margin-bottom: 90px;
+    display: block;
 }
+
 .cart .input-prepend,
 .cart .input-append {
     margin-bottom: 0;

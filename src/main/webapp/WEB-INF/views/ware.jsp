@@ -25,6 +25,13 @@
 <!-- Nav End-->
 <!-- Main Start -->
 <div class="container">
+    <div class="input-append text-center query-box">
+        <form action="${ctx}/ware/query" method="get">
+            <input type="hidden" id="typeahead-url" value="${ctx}/ware/query/json">
+            <input type="text" name="keyword" value="${param.keyword}" accesskey="s" id="typeahead" class="span3">
+            <button class="btn" type="submit">搜索</button>
+        </form>
+    </div>
     <div class="ware">
         <table class="table table-bordered table-hover table-striped">
             <thead>
@@ -127,10 +134,16 @@
         </div>
     </div>
 </script>
+<script id="query-tpl" type="text/template">
+    <div class="text-left">
+        <strong>{{:code}}</strong>
+        <strong>{{:name}}</strong>
+    </div>
+</script>
 
 <script src="${ctx}/assets/js/jquery.js"></script>
 <script src="${ctx}/assets/js/bootstrap.js"></script>
 <script src="${ctx}/assets/js/jsrender.js"></script>
-<script src="${ctx}/assets/js/ironw.js"></script>
+<script src="${ctx}/assets/js/ware.js"></script>
 </body>
 </html>

@@ -25,7 +25,7 @@
 <!-- Nav End-->
 <!-- Main Start -->
 <div class="container">
-    <div class="text-center">
+    <div class="text-center query-box">
         <input type="hidden" id="typeahead-url" value="${ctx}/ware/query/json">
         <input type="text" accesskey="s" id="typeahead" class="span4">
     </div>
@@ -92,6 +92,6 @@
 <script src="${ctx}/assets/js/jquery.js"></script>
 <script src="${ctx}/assets/js/bootstrap.js"></script>
 <script src="${ctx}/assets/js/jsrender.js"></script>
-<script src="${ctx}/assets/js/ironw.js"></script>
+<script src="${ctx}/assets/js/cart.js"></script>
 </body>
 </html>
