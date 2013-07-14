@@ -4,7 +4,7 @@
 
 <mapper namespace="com.ironw.domain.Order">
     <insert id="insert" keyProperty="id" useGeneratedKeys="true" parameterType="Order">
-        insert into orders (id, total, create_at)
-        values (#{id}, #{total}, #{createAt})
+        insert into orders (id, number, total, create_at)
+        values (#{id}, #{number}, #{total}, #{createAt})
     </insert>
 </mapper>

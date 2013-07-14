@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.ironw.domain.Sequence">
+    <select id="findBy" resultType="Sequence">
+      select *
+      from sequence
+      where id = #{id}
+    </select>
+
+    <update id="update" parameterType="Sequence">
+        update sequence set
+          value = #{value},
+          date = #{date}
+        where id = #{id}
+    </update>
+</mapper>

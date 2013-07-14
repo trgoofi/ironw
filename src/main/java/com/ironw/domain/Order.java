@@ -9,6 +9,7 @@ import java.util.List;
  * @author trgoofi
  */
 public class Order extends Entity {
+  private String number;
   private List<OrderItem> items = new ArrayList<OrderItem>();
   private BigDecimal total = new BigDecimal(0);
   private Date createAt;
@@ -18,6 +19,14 @@ public class Order extends Entity {
     this.total = this.total.add(orderItem.getTotal());
     this.items.add(orderItem);
     return this;
+  }
+
+  public String getNumber() {
+    return number;
+  }
+
+  public void setNumber(String number) {
+    this.number = number;
   }
 
   public List<OrderItem> getItems() {
