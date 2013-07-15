@@ -1,6 +1,7 @@
 package com.ironw.web;
 
 import com.ironw.domain.Cart;
+import com.ironw.domain.Client;
 import com.ironw.domain.Order;
 import com.ironw.service.OrderService;
 import org.springframework.stereotype.Controller;
@@ -29,8 +30,9 @@ public class OrderController {
   }
 
   @RequestMapping(value = "confirm", method = RequestMethod.POST)
-  public String confirm(HttpSession session) {
+  public String confirm(Client client, HttpSession session) {
     Order order = (Order) session.getAttribute(ORDER_SESSION);
+    order.setClient(client);
     orderService.confirm(order);
     session.removeAttribute(ORDER_SESSION);
     return "redirect:/";

@@ -54,7 +54,14 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <td colspan="7" style="text-align: right;">
+                    <td colspan="4">
+                        <input type="text" class="input-small" name="name" placeholder="客户"/>
+                        <input type="text" class="input-small" name="phone" placeholder="电话" />
+                        <input type="text" class="input-medium" name="address" placeholder="地址" />
+                        <input type="text" class="input-small" name="contacts" placeholder="联系人" />
+                    </td>
+                    <td colspan="3" style="text-align: right;">
+
                         <span>总金额：</span>
                         <strong id="total" class="text-info"><fmt:formatNumber minFractionDigits="2" maxFractionDigits="2" value="${order.total}" /></strong>
                         <a href="${ctx}/order/cancel" class="btn btn-small btn-margin">取消</a>

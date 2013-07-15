@@ -13,6 +13,7 @@ public class Order extends Entity {
   private List<OrderItem> items = new ArrayList<OrderItem>();
   private BigDecimal total = new BigDecimal(0);
   private Date createAt;
+  private Client client;
 
   public Order addItem(CartItem cartItem, Ware ware) {
     OrderItem orderItem = new OrderItem(cartItem, ware, this);
@@ -51,5 +52,13 @@ public class Order extends Entity {
 
   public void setCreateAt(Date createAt) {
     this.createAt = createAt;
+  }
+
+  public Client getClient() {
+    return client;
+  }
+
+  public void setClient(Client client) {
+    this.client = client;
   }
 }

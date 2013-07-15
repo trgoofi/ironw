@@ -46,6 +46,11 @@ body {
 .order tr td:nth-child(7) {
     text-align: right;
 }
+.order input[type="text"] {
+    margin-bottom: 0;
+    margin-right: 10px;
+}
+
 
 .tooltip.in {
     opacity: 0.8;
