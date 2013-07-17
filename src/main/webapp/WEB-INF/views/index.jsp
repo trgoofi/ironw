@@ -27,7 +27,7 @@
 <div class="container">
     <div class="text-center query-box">
         <input type="hidden" id="typeahead-url" value="${ctx}/ware/query/json">
-        <input type="text" accesskey="s" id="typeahead" class="span4">
+        <input type="text" accesskey="s" id="typeahead" class="span4" autocomplete="off">
     </div>
     <div class="cart">
         <form action="${ctx}/order/create" method="post">
