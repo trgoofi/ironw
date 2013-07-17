@@ -10,4 +10,6 @@ public interface OrderService {
   Order cartToOrder(Cart cart);
 
   Order confirm(Order order);
+
+  byte[] confirmAndCreatePdf(Order order);
 }

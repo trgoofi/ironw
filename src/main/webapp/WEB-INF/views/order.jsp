@@ -65,7 +65,7 @@
                         <span>总金额：</span>
                         <strong id="total" class="text-info"><fmt:formatNumber minFractionDigits="2" maxFractionDigits="2" value="${order.total}" /></strong>
                         <a href="${ctx}/order/cancel" class="btn btn-small btn-margin">取消</a>
-                        <a href="${ctx}/order/print" class="btn btn-primary btn-small btn-margin">打单</a>
+                        <a href="${ctx}/order/print.pdf" id="print" class="btn btn-primary btn-small btn-margin">打单</a>
                         <button type="submit" class="btn btn-primary btn-small btn-margin">结算</button>
                     </td>
                 </tr>
@@ -77,5 +77,13 @@
 <!-- Main End -->
 <script src="${ctx}/assets/js/jquery.js"></script>
 <script src="${ctx}/assets/js/bootstrap.js"></script>
+<script type="text/javascript">
+    $("#print").click(function(e) {
+        e.preventDefault();
+        $form = $("form");
+        $form.attr("action", $(this).attr("href"));
+        $form.submit();
+    });
+</script>
 </body>
 </html>

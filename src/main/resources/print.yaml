@@ -1,0 +1,26 @@
+title: 中山火炬开发区中山火炬开发区中山火炬开发区
+phone: 1591343261
+address: 中山火炬开发区中山火炬开发区中山火炬开发区
+
+pageWidth: 241
+pageHeight: 140
+
+marginLeft: 24
+marginRight: 25
+marginTop: 0
+marginBottom: 5
+
+leading: 1
+
+titleFontSize: 8
+subTitleFontSize: 3
+contentFontSize: 4
+
+rightColumnOffset: 40
+centerColumnOffset: 10
+
+tableMarginTop: 25
+tableMarginBottom: 11
+tableColumnWidths: [25, 75, 12, 20, 20, 20, 20]
+tableBorderWidth: 0.2
+

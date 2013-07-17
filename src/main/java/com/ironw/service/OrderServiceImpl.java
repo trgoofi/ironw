@@ -3,6 +3,7 @@ package com.ironw.service;
 import com.ironw.domain.*;
 import com.ironw.repository.CrudRepo;
 import com.ironw.repository.WareRepo;
+import com.ironw.service.pdf.PdfService;
 import org.apache.commons.lang3.StringUtils;
 import org.joda.time.DateMidnight;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,7 @@ import java.util.Date;
 public class OrderServiceImpl implements OrderService {
   @Inject CrudRepo crudRepo;
   @Inject WareRepo wareRepo;
+  @Inject PdfService pdfService;
 
   @Override
   public Order cartToOrder(Cart cart) {
@@ -55,6 +57,13 @@ public class OrderServiceImpl implements OrderService {
     }
 
     return order;
+  }
+
+  @Override
+  public byte[] confirmAndCreatePdf(Order order) {
+    this.confirm(order);
+    byte[] pdf = pdfService.createPdfOf(order);
+    return pdf;
   }
 
   @Transactional

@@ -4,6 +4,9 @@ import com.ironw.domain.Cart;
 import com.ironw.domain.Client;
 import com.ironw.domain.Order;
 import com.ironw.service.OrderService;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -36,6 +39,21 @@ public class OrderController {
     orderService.confirm(order);
     session.removeAttribute(ORDER_SESSION);
     return "redirect:/";
+  }
+
+  @RequestMapping(value = "print.pdf", method = RequestMethod.POST)
+  public HttpEntity<byte[]> print(Client client, HttpSession session) {
+    Order order = (Order) session.getAttribute(ORDER_SESSION);
+    order.setClient(client);
+
+    byte[] pdf = orderService.confirmAndCreatePdf(order);
+    HttpHeaders headers = new HttpHeaders();
+    headers.setContentType(new MediaType("application", "pdf"));
+    HttpEntity<byte[]> response = new HttpEntity<byte[]>(pdf, headers);
+
+    session.removeAttribute(ORDER_SESSION);
+
+    return response;
   }
 
   @RequestMapping(value = "cancel", method = RequestMethod.GET)
