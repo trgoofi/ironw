@@ -68,24 +68,24 @@
         <div class="pagination pagination-centered">
             <ul>
                 <p:first>
-                    <p:clickable><li><a href="${ctx}/ware/query?page=${p}&size=${page.size}">&laquo;</a></li></p:clickable>
+                    <p:clickable><li><a href="${ctx}/ware/query?page=${p}&size=${page.size}&keyword=${param.keyword}">&laquo;</a></li></p:clickable>
                     <p:unclickable><li class="disabled"><a>&laquo;</a></li></p:unclickable>
                 </p:first>
                 <p:previous>
-                    <p:clickable><li><a href="${ctx}/ware/query?page=${p}&size=${page.size}">&lsaquo;</a></li></p:clickable>
+                    <p:clickable><li><a href="${ctx}/ware/query?page=${p}&size=${page.size}&keyword=${param.keyword}">&lsaquo;</a></li></p:clickable>
                     <p:unclickable><li class="disabled"><a>&lsaquo;</a></li></p:unclickable>
                 </p:previous>
                 <p:number>
-                    <p:clickable><li><a href="${ctx}/ware/query?page=${p}&size=${page.size}">${p}</a></li></p:clickable>
+                    <p:clickable><li><a href="${ctx}/ware/query?page=${p}&size=${page.size}&keyword=${param.keyword}">${p}</a></li></p:clickable>
                     <p:unclickable><li class="active"><a>${p}</a></li></p:unclickable>
                 </p:number>
                 <p:ellipsis><li class="disabled"><a>...</a></li></p:ellipsis>
                 <p:next>
-                    <p:clickable><li><a href="${ctx}/ware/query?page=${p}&size=${page.size}">&rsaquo;</a></li></p:clickable>
+                    <p:clickable><li><a href="${ctx}/ware/query?page=${p}&size=${page.size}&keyword=${param.keyword}">&rsaquo;</a></li></p:clickable>
                     <p:unclickable><li class="disabled"><a>&rsaquo;</a></li></p:unclickable>
                 </p:next>
                 <p:last>
-                    <p:clickable><li><a href="${ctx}/ware/query?page=${p}&size=${page.size}">&raquo;</a></li></p:clickable>
+                    <p:clickable><li><a href="${ctx}/ware/query?page=${p}&size=${page.size}&keyword=${param.keyword}">&raquo;</a></li></p:clickable>
                     <p:unclickable><li class="disabled"><a>&raquo;</a></li></p:unclickable>
                 </p:last>
             </ul>
