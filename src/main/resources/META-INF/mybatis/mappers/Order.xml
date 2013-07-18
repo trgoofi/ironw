@@ -3,8 +3,20 @@
     "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.ironw.domain.Order">
+    <resultMap id="order" type="Order">
+        <result property="client.name" column="name" />
+        <result property="client.phone" column="phone" />
+        <result property="client.address" column="address" />
+        <result property="client.contacts" column="contacts" />
+    </resultMap>
     <insert id="insert" keyProperty="id" useGeneratedKeys="true" parameterType="Order">
         insert into orders (id, number, total, create_at, name, phone, address, contacts)
         values (#{id}, #{number}, #{total}, #{createAt}, #{client.name}, #{client.phone}, #{client.address}, #{client.contacts})
     </insert>
+
+    <select id="findPage" resultMap="order">
+        select *
+        from orders
+        order by id desc
+    </select>
 </mapper>

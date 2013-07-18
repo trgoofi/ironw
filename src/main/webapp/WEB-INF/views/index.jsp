@@ -18,6 +18,7 @@
             <ul class="nav">
                 <li class="active"><a href="${ctx}/">首页</a></li>
                 <li><a href="${ctx}/ware/query">商品</a></li>
+                <li><a href="${ctx}/order/query">购买记录</a></li>
             </ul>
         </div>
     </div>

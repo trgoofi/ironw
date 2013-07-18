@@ -3,6 +3,7 @@ package com.ironw.web;
 import com.ironw.domain.Cart;
 import com.ironw.domain.Client;
 import com.ironw.domain.Order;
+import com.ironw.domain.Page;
 import com.ironw.service.OrderService;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -60,6 +61,13 @@ public class OrderController {
   public String cancel(HttpSession session) {
     session.removeAttribute(ORDER_SESSION);
     return "redirect:/";
+  }
+
+  @RequestMapping(value = "query", method = RequestMethod.GET)
+  public String query(Page<Order> page, Model model) {
+    page = orderService.query(page);
+    model.addAttribute("page", page);
+    return "orderList";
   }
 
 }

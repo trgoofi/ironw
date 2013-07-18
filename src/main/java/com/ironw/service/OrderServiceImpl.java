@@ -66,6 +66,11 @@ public class OrderServiceImpl implements OrderService {
     return pdf;
   }
 
+  @Override
+  public Page<Order> query(Page<Order> page) {
+    return crudRepo.findPage(page, Order.class);
+  }
+
   @Transactional
   private synchronized String getOrderNumber() {
     Sequence sequence = crudRepo.findBy("1", Sequence.class);
