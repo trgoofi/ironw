@@ -64,6 +64,33 @@
             </tbody>
         </table>
     </div>
+    <p:pagination current="${page.page}" pages="${page.totalPages}" page="p">
+        <div class="pagination pagination-centered">
+            <ul>
+                <p:first>
+                    <p:clickable><li><a href="${ctx}/ware/query?page=${p}&size=${param.size}">&laquo;</a></li></p:clickable>
+                    <p:unclickable><li class="disabled"><a>&laquo;</a></li></p:unclickable>
+                </p:first>
+                <p:previous>
+                    <p:clickable><li><a href="${ctx}/ware/query?page=${p}&size=${param.size}">&lsaquo;</a></li></p:clickable>
+                    <p:unclickable><li class="disabled"><a>&lsaquo;</a></li></p:unclickable>
+                </p:previous>
+                <p:number>
+                    <p:clickable><li><a href="${ctx}/ware/query?page=${p}&size=${param.size}">${p}</a></li></p:clickable>
+                    <p:unclickable><li class="active"><a>${p}</a></li></p:unclickable>
+                </p:number>
+                <p:ellipsis><li class="disabled"><a>...</a></li></p:ellipsis>
+                <p:next>
+                    <p:clickable><li><a href="${ctx}/ware/query?page=${p}&size=${param.size}">&rsaquo;</a></li></p:clickable>
+                    <p:unclickable><li class="disabled"><a>&rsaquo;</a></li></p:unclickable>
+                </p:next>
+                <p:last>
+                    <p:clickable><li><a href="${ctx}/ware/query?page=${p}&size=${param.size}">&raquo;</a></li></p:clickable>
+                    <p:unclickable><li class="disabled"><a>&raquo;</a></li></p:unclickable>
+                </p:last>
+            </ul>
+        </div>
+    </p:pagination>
     <div id="modal-container"></div>
 </div>
 <!-- Main End -->
