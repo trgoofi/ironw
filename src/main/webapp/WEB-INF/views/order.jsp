@@ -14,7 +14,7 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="${ctx}/">ironw</a>
+            <a class="brand" href="${ctx}/">${siteName}</a>
             <ul class="nav">
                 <li class="active"><a href="${ctx}/">首页</a></li>
                 <li><a href="${ctx}/ware/query">商品</a></li>

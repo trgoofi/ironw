@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>${siteName}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="${ctx}/assets/css/bootstrap.css" rel="stylesheet">
     <link href="${ctx}/assets/css/style.css" rel="stylesheet">
@@ -14,7 +14,7 @@
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="navbar-inner">
         <div class="container">
-            <a class="brand" href="${ctx}/">ironw</a>
+            <a class="brand" href="${ctx}/">${siteName}</a>
             <ul class="nav">
                 <li class="active"><a href="${ctx}/">首页</a></li>
                 <li><a href="${ctx}/ware/query">商品</a></li>

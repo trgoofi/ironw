@@ -13,6 +13,7 @@
     <context:annotation-config/>
     <context:component-scan base-package="com.ironw">
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller" />
+        <context:exclude-filter type="assignable" expression="com.ironw.web.conf.WebConfig" />
     </context:component-scan>
 
     <import resource="mybatis-context.xml"/>
