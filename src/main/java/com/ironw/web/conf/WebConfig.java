@@ -33,6 +33,7 @@ public class WebConfig {
     try {
       HashMap<String, Object> values = mapper.readValue(resource.getInputStream(), typeRef);
       servletContext.setAttribute("siteName", values.get("siteName"));
+      servletContext.setAttribute("ctx", servletContext.getContextPath());
     } catch (IOException e) {
       throw new RuntimeException("Could not load web.yaml", e);
     }
